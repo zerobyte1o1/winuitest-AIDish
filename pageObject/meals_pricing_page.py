@@ -71,5 +71,5 @@ class MealsPricingPage(BasePage):
         return self.locate_element(class_name="QPushButton",found_index=2)
 
     def clear_machine_tips_loc(self):
-        return self.locate_element(auto_id="")
+        return self.locate_element(auto_id="PageBase.widgetMain.CashierWidget.SFMessageForm.widgetMsg.lbMsg")
 
