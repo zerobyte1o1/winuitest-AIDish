@@ -58,5 +58,5 @@ class MealsPricingPage(BasePage):
     def cancel_payment_loc(self):
         return self.locate_element(title="取消支付")
 
-    def identification_of_areas(self):
+    def identification_of_areas_loc(self):
         return self.locate_element(auto_id="PageBase.widgetMain.CashierWidget.widget.widgetLeft.widgetViewer.viewer")

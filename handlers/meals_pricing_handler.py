@@ -16,12 +16,47 @@ class MealsPricingHandler(MealsPricingPage):
 
     @log_decorator
     def click_clear_machine_yes_lco(self):
-        self.clear_machine_yes_loc().clicik()
+        self.clear_machine_yes_loc().click()
 
     @log_decorator
     def click_clear_machine_no_lco(self):
-        self.clear_machine_no_loc().clicik()
+        self.clear_machine_no_loc().click()
 
+    def click_digital_selection_loc(self):
+        self.digital_selection_loc().click()
+
+    def click_drink_loc(self):
+        self.drink_loc().click()
+
+    def click_non_standard_loc(self):
+        self.non_standard_loc().click()
+
+    def click_calculation_loc(self,digit:str):
+        self.calculation_loc(digit).click()
+
+    def click_reidentify_loc(self):
+        self.reidentify_loc().click()
+
+    def click_merged_payment_loc(self):
+        self.merged_payment_loc().click()
+
+    def click_auto_payment_loc(self):
+        self.auto_payment_loc().click()
+
+    def click_cash_payment_loc(self):
+        self.cash_payment_loc().click()
+
+    def click_cooperative_payment_loc(self):
+        self.cooperative_payment_loc().click()
+
+    def click_hanging_orders_loc(self):
+        self.hanging_orders_loc().click()
+
+    def click_cancel_payment_loc(self):
+        self.cancel_payment_loc().click()
+
+    def click_identification_of_areas_loc(self):
+        self.identification_of_areas_loc().click()
 
 if __name__ == '__main__':
-    MealsPricingHandler().click_clear_machine_loc()
+    MealsPricingHandler().click_identification_of_areas_loc()
