@@ -38,27 +38,31 @@ class MealsPricingPage(BasePage):
         return self.locate_element(title=digit)
 
     def reidentify_loc(self):
-        return self.locate_element(title="重新识别")
+        return self.locate_element(title="重新\n识别")
 
     def merged_payment_loc(self):
-        return self.locate_element(title="""合并
-        支付""")
+        return self.locate_element(title="合并\n支付")
 
     def auto_payment_loc(self):
-        return self.locate_element(title="""自动
-支付""")
+        return self.locate_element(title="自动\n支付")
 
     def cash_payment_loc(self):
-        return self.locate_element(title="现金支付")
+        return self.locate_element(title="现金\n支付")
 
     def cooperative_payment_loc(self):
-        return self.locate_element(title="合作支付")
+        return self.locate_element(title="合作\n支付")
 
     def hanging_orders_loc(self):
-        return self.locate_element(title="挂起订单")
+        return self.locate_element(title="挂起\n订单")
 
     def cancel_payment_loc(self):
-        return self.locate_element(title="取消支付")
+        return self.locate_element(title="取消\n支付")
+
+    def confirm_payment_loc(self):
+        return self.locate_element(title="确认支付")
 
     def identification_of_areas_loc(self):
         return self.locate_element(class_name="QImageViewer")
+
+    def total_amount(self):
+        return self.locate_element()

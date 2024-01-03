@@ -52,9 +52,11 @@ class MealsPricingHandler(MealsPricingPage):
     def click_cancel_payment_loc(self):
         self.cancel_payment_loc().click()
 
+    def click_confirm_payment_loc(self):
+        self.confirm_payment_loc().click()
+
     def click_identification_of_areas_loc(self):
         self.identification_of_areas_loc().click_input()
-
 
 
 if __name__ == '__main__':
