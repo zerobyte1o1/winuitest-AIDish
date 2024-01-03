@@ -25,7 +25,8 @@ class BasePage:
             title_re=None,
             control_type=None,
             best_match=None,
-            auto_id=None):
+            auto_id=None,
+            found_index=0):
         """
         封装所有pywinauto定位元素的方法\n
         class_name=None, # 类名\n
@@ -37,13 +38,14 @@ class BasePage:
         auto_id=None, # 这个也是固定的可以用，inspect界面AutomationId字段，但是很多控件没有这个属性
         """
         try:
-            element = self.driver.window(class_name=class_name,
+            element = self.driver.child_window(class_name=class_name,
                                          class_name_re=class_name_re,
                                          title=title,
                                          title_re=title_re,
                                          control_type=control_type,
                                          best_match=best_match,
-                                         auto_id=auto_id).wait('visible')
+                                         auto_id=auto_id,
+                                         found_index=found_index).wait('visible')
             element.draw_outline(colour="green",thickness=5)
         except Exception as e:
             element = None

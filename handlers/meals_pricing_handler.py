@@ -58,7 +58,9 @@ class MealsPricingHandler(MealsPricingPage):
     def click_identification_of_areas_loc(self):
         self.identification_of_areas_loc().click_input()
 
-
+    def text_total_amount_loc(self):
+        return self.total_amount_loc().window_text()
 
 if __name__ == '__main__':
-    MealsPricingHandler().click_auto_payment_loc()
+    a=MealsPricingHandler().text_total_amount_loc()
+    print(a)

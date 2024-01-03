@@ -64,5 +64,9 @@ class MealsPricingPage(BasePage):
     def identification_of_areas_loc(self):
         return self.locate_element(class_name="QImageViewer")
 
-    def total_amount(self):
-        return self.locate_element()
+    def total_amount_loc(self):
+        return self.locate_element(class_name="QPushButton",found_index=1)
+
+
+
+
