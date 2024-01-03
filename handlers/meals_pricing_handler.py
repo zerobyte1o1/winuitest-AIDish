@@ -19,6 +19,9 @@ class MealsPricingHandler(MealsPricingPage):
     def click_clear_machine_no_lco(self):
         self.clear_machine_no_loc().click()
 
+    def text_clear_machine_tips_loc(self):
+        return self.clear_machine_tips_loc().window_text()
+
     def click_digital_selection_loc(self):
         self.digital_selection_loc().click()
 

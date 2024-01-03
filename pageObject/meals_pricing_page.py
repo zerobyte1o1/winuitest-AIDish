@@ -14,6 +14,9 @@ class MealsPricingPage(BasePage):
     def clear_machine_loc(self):
         return self.locate_element(title='清机')
 
+    def clear_machine_tips_loc(self):
+        return self.locate_element(auto_id="PageBase.widgetMain.CashierWidget.SFMessageForm.widgetMsg.lbMsg")
+
     def clear_machine_yes_loc(self):
         return self.locate_element(auto_id='PageBase.widgetMain.CashierWidget.SFMessageForm.btnOk')
 
@@ -65,11 +68,7 @@ class MealsPricingPage(BasePage):
         return self.locate_element(class_name="QImageViewer")
 
     def total_amount_loc(self):
-        return self.locate_element(class_name="QPushButton",found_index=1)
+        return self.locate_element(class_name="QPushButton", found_index=1)
 
     def promotion_amount_loc(self):
-        return self.locate_element(class_name="QPushButton",found_index=2)
-
-    def clear_machine_tips_loc(self):
-        return self.locate_element(auto_id="PageBase.widgetMain.CashierWidget.SFMessageForm.widgetMsg.lbMsg")
-
+        return self.locate_element(class_name="QPushButton", found_index=2)

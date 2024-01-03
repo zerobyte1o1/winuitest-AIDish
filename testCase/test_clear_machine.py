@@ -28,7 +28,7 @@ class TestClearMachine:
             self.mph.clear_machine_yes_loc()
         with allure.step('再次点击清机按钮'):
             self.mph.click_clear_machine_loc()
-        assert
+        assert current_time in self.mph.text_clear_machine_tips_loc()
 
     def test_clear_machine_reverse(self):
         pass
