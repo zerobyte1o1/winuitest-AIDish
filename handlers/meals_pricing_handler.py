@@ -10,15 +10,12 @@ class MealsPricingHandler(MealsPricingPage):
     def __init__(self):
         super(MealsPricingHandler, self).__init__()
 
-    @log_decorator
     def click_clear_machine_loc(self):
         self.clear_machine_loc().click()
 
-    @log_decorator
     def click_clear_machine_yes_lco(self):
         self.clear_machine_yes_loc().click()
 
-    @log_decorator
     def click_clear_machine_no_lco(self):
         self.clear_machine_no_loc().click()
 
@@ -31,7 +28,7 @@ class MealsPricingHandler(MealsPricingPage):
     def click_non_standard_loc(self):
         self.non_standard_loc().click()
 
-    def click_calculation_loc(self,digit:str):
+    def click_calculation_loc(self, digit: str):
         self.calculation_loc(digit).click()
 
     def click_reidentify_loc(self):
@@ -56,7 +53,8 @@ class MealsPricingHandler(MealsPricingPage):
         self.cancel_payment_loc().click()
 
     def click_identification_of_areas_loc(self):
-        self.identification_of_areas_loc().click()
+        self.identification_of_areas_loc().click_input()
+
 
 if __name__ == '__main__':
-    MealsPricingHandler().click_identification_of_areas_loc()
+    MealsPricingHandler().click_auto_payment_loc()
