@@ -43,14 +43,12 @@ class BasePage:
                                          title_re=title_re,
                                          control_type=control_type,
                                          best_match=best_match,
-                                         auto_id=auto_id)
-
+                                         auto_id=auto_id).wait('visible')
         except Exception as e:
             element = None
             self.log.info(e)
             self.log.error(inspect.currentframe().f_back.f_code.co_name + " 元素定位输入有误")
         return element
-
     def get_variables(self, module_name: str, variables_name: str):
         """
         :param module_name:
