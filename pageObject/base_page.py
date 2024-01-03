@@ -1,5 +1,7 @@
 import inspect
 import os
+import time
+
 import yaml
 
 
@@ -35,7 +37,6 @@ class BasePage:
         best_match=None, #\n
         auto_id=None, # 这个也是固定的可以用，inspect界面AutomationId字段，但是很多控件没有这个属性
         """
-
         try:
             element = self.driver.window(class_name=class_name,
                                          class_name_re=class_name_re,

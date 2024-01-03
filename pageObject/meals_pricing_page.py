@@ -41,10 +41,12 @@ class MealsPricingPage(BasePage):
         return self.locate_element(title="重新识别")
 
     def merged_payment_loc(self):
-        return self.locate_element(title="合并支付")
+        return self.locate_element(title="""合并
+        支付""")
 
     def auto_payment_loc(self):
-        return self.locate_element(title="自动支付")
+        return self.locate_element(title="""自动
+支付""")
 
     def cash_payment_loc(self):
         return self.locate_element(title="现金支付")
