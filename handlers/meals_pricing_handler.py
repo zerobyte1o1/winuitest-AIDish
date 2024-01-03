@@ -59,8 +59,20 @@ class MealsPricingHandler(MealsPricingPage):
         self.identification_of_areas_loc().click_input()
 
     def text_total_amount_loc(self):
+        """
+        总金额
+        :return:
+        """
         return self.total_amount_loc().window_text()
 
+    def text_promotion_amount_loc(self):
+        """
+        优惠金额
+        :return:
+        """
+        return self.promotion_amount_loc().window_text()
+
+
 if __name__ == '__main__':
-    a=MealsPricingHandler().text_total_amount_loc()
+    a = MealsPricingHandler().text_total_amount_loc()
     print(a)

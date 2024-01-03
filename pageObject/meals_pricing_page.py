@@ -67,6 +67,9 @@ class MealsPricingPage(BasePage):
     def total_amount_loc(self):
         return self.locate_element(class_name="QPushButton",found_index=1)
 
+    def promotion_amount_loc(self):
+        return self.locate_element(class_name="QPushButton",found_index=2)
 
-
+    def clear_machine_tips_loc(self):
+        return self.locate_element(auto_id="")
 
