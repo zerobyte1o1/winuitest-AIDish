@@ -44,6 +44,7 @@ class BasePage:
                                          control_type=control_type,
                                          best_match=best_match,
                                          auto_id=auto_id).wait('visible')
+            element.draw_outline(colour="green",thickness=5)
         except Exception as e:
             element = None
             self.log.info(e)

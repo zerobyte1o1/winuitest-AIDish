@@ -59,5 +59,6 @@ class MealsPricingHandler(MealsPricingPage):
         self.identification_of_areas_loc().click_input()
 
 
+
 if __name__ == '__main__':
     MealsPricingHandler().click_auto_payment_loc()
