@@ -23,7 +23,7 @@ class TestClearMachine:
     def test_clear_machine_forward(self):
         with allure.step('点击清机按钮'):
             self.mph.click_clear_machine_loc()
-            current_time = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        current_time = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
         with allure.step('点击确定'):
             self.mph.clear_machine_yes_loc()
         with allure.step('再次点击清机按钮'):

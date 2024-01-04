@@ -1,5 +1,7 @@
+import time
+
 from pageObject.meals_pricing_page import MealsPricingPage
-from utils.logger import log_decorator
+from utils.logger import Logger
 
 
 class MealsPricingHandler(MealsPricingPage):
@@ -11,52 +13,53 @@ class MealsPricingHandler(MealsPricingPage):
         super(MealsPricingHandler, self).__init__()
 
     def click_clear_machine_loc(self):
-        self.clear_machine_loc().click()
+        self.clear_machine_loc().click_input()
+
 
     def click_clear_machine_yes_lco(self):
-        self.clear_machine_yes_loc().click()
+        self.clear_machine_yes_loc().click_input()
 
     def click_clear_machine_no_lco(self):
-        self.clear_machine_no_loc().click()
+        self.clear_machine_no_loc().click_input()
 
     def text_clear_machine_tips_loc(self):
         return self.clear_machine_tips_loc().window_text()
 
     def click_digital_selection_loc(self):
-        self.digital_selection_loc().click()
+        self.digital_selection_loc().click_input()
 
     def click_drink_loc(self):
-        self.drink_loc().click()
+        self.drink_loc().click_input()
 
     def click_non_standard_loc(self):
-        self.non_standard_loc().click()
+        self.non_standard_loc().click_input()
 
     def click_calculation_loc(self, digit: str):
-        self.calculation_loc(digit).click()
+        self.calculation_loc(digit).click_input()
 
     def click_reidentify_loc(self):
-        self.reidentify_loc().click()
+        self.reidentify_loc().click_input()
 
     def click_merged_payment_loc(self):
-        self.merged_payment_loc().click()
+        self.merged_payment_loc().click_input()
 
     def click_auto_payment_loc(self):
-        self.auto_payment_loc().click()
+        self.auto_payment_loc().click_input()
 
     def click_cash_payment_loc(self):
-        self.cash_payment_loc().click()
+        self.cash_payment_loc().click_input()
 
     def click_cooperative_payment_loc(self):
-        self.cooperative_payment_loc().click()
+        self.cooperative_payment_loc().click_input()
 
     def click_hanging_orders_loc(self):
-        self.hanging_orders_loc().click()
+        self.hanging_orders_loc().click_input()
 
     def click_cancel_payment_loc(self):
-        self.cancel_payment_loc().click()
+        self.cancel_payment_loc().click_input()
 
     def click_confirm_payment_loc(self):
-        self.confirm_payment_loc().click()
+        self.confirm_payment_loc().click_input()
 
     def click_identification_of_areas_loc(self):
         self.identification_of_areas_loc().click_input()
@@ -77,5 +80,9 @@ class MealsPricingHandler(MealsPricingPage):
 
 
 if __name__ == '__main__':
-    a = MealsPricingHandler().text_total_amount_loc()
-    print(a)
+    print("开始")
+    log=Logger().logger
+    a = MealsPricingHandler()
+    a.click_clear_machine_loc()
+    x=a.text_clear_machine_tips_loc()
+    print(x)

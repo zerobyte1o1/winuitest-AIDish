@@ -15,10 +15,11 @@ class MealsPricingPage(BasePage):
         return self.locate_element(title='清机')
 
     def clear_machine_tips_loc(self):
-        return self.locate_element(auto_id="PageBase.widgetMain.CashierWidget.SFMessageForm.widgetMsg.lbMsg")
+        print("在定位了")
+        return self.locate_element(title_re="^上次清机时间.*")
 
     def clear_machine_yes_loc(self):
-        return self.driver.child_window(auto_id='PageBase.widgetMain.CashierWidget.SFMessageForm.btnOk')
+        return self.locate_element(auto_id='PageBase.widgetMain.CashierWidget.SFMessageForm.btnOk')
 
     def clear_machine_no_loc(self):
         return self.locate_element(auto_id='PageBase.widgetMain.CashierWidget.SFMessageForm.btnCancel')

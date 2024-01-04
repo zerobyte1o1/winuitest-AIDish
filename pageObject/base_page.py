@@ -14,6 +14,7 @@ class BasePage:
         if DriverFactory.driver is None:
             DriverFactory.get_driver()
         self.driver = DriverFactory.driver
+        self.app = DriverFactory.app
         self.log = DriverFactory.log
 
     def locate_element(
@@ -38,14 +39,14 @@ class BasePage:
         """
         try:
             element = self.driver.child_window(class_name=class_name,
-                                         class_name_re=class_name_re,
-                                         title=title,
-                                         title_re=title_re,
-                                         control_type=control_type,
-                                         best_match=best_match,
-                                         auto_id=auto_id,
-                                         found_index=found_index).wait('visible')
-            element.draw_outline(colour="green",thickness=5)
+                                               class_name_re=class_name_re,
+                                               title=title,
+                                               title_re=title_re,
+                                               control_type=control_type,
+                                               best_match=best_match,
+                                               auto_id=auto_id,
+                                               found_index=found_index).wait('visible')
+            element.draw_outline(colour="green", thickness=5)
         except Exception as e:
             element = None
             self.log.info(e)
