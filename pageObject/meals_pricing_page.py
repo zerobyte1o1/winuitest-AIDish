@@ -18,7 +18,7 @@ class MealsPricingPage(BasePage):
         return self.locate_element(auto_id="PageBase.widgetMain.CashierWidget.SFMessageForm.widgetMsg.lbMsg")
 
     def clear_machine_yes_loc(self):
-        return self.driver['提示'].child_window(auto_id='PageBase.widgetMain.CashierWidget.SFMessageForm.btnOk')
+        return self.driver.child_window(auto_id='PageBase.widgetMain.CashierWidget.SFMessageForm.btnOk')
 
     def clear_machine_no_loc(self):
         return self.locate_element(auto_id='PageBase.widgetMain.CashierWidget.SFMessageForm.btnCancel')
