@@ -1,6 +1,8 @@
 import os
 
 from pageObject.meals_pricing_page import MealsPricingPage
+from pywinauto.keyboard import send_keys
+
 from utils.logger import Logger
 
 
@@ -41,7 +43,7 @@ class MealsPricingHandler(MealsPricingPage):
         设置打开图片文件名
         """
         self.open_img_file_name_loc().click_input()
-        self.open_img_file_name_loc().type_keys(path)
+        send_keys(path)
 
     def click_open_img_ok_loc(self):
         """
