@@ -18,7 +18,7 @@ class MealsPricingPage(BasePage):
         return self.locate_element(auto_id="1148")
 
     def open_img_ok_loc(self):
-        return self.locate_element(auto_id="1")
+        return self.locate_element(auto_id="1",title="打开(O)")
 
     def open_img_no_loc(self):
         return self.locate_element(auto_id="2")
