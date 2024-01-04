@@ -157,8 +157,8 @@ if __name__ == '__main__':
     log = Logger().logger
     a = MealsPricingHandler()
     a.click_open_img_loc()
-    current_path = os.path.dirname(os.path.abspath(__file__))
+    current_path = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     img_path=os.path.join(current_path, "/data/test_img.jpg")
     print(img_path)
-    a.set_text_open_img_file_name_loc("")
+    a.set_text_open_img_file_name_loc(img_path)
     a.click_open_img_ok_loc()
