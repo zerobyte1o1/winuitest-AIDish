@@ -39,9 +39,9 @@ class TestClearMachine:
         with allure.step('点击清机按钮'):
             self.mph.click_clear_machine_loc()
         current_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-        with allure.step('点击确定'):
-            self.mph.click_clear_machine_yes_lco()
-        with allure.step('再次点击清机按钮'):
+        with allure.step('点击取消'):
             self.mph.click_clear_machine_no_lco()
+        with allure.step('再次点击清机按钮'):
+            self.mph.click_clear_machine_loc()
         with allure.step('校验是否已清机成功'):
             assert current_time not in self.mph.text_clear_machine_tips_loc()
