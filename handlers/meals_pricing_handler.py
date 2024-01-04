@@ -1,5 +1,3 @@
-import time
-
 from pageObject.meals_pricing_page import MealsPricingPage
 from utils.logger import Logger
 
@@ -15,12 +13,14 @@ class MealsPricingHandler(MealsPricingPage):
     def click_clear_machine_loc(self):
         self.clear_machine_loc().click_input()
 
-
     def click_clear_machine_yes_lco(self):
         self.clear_machine_yes_loc().click_input()
 
     def click_clear_machine_no_lco(self):
         self.clear_machine_no_loc().click_input()
+
+    def click_open_img_loc(self):
+        self.open_img_loc().click_input()
 
     def text_clear_machine_tips_loc(self):
         return self.clear_machine_tips_loc().window_text()
@@ -81,8 +81,8 @@ class MealsPricingHandler(MealsPricingPage):
 
 if __name__ == '__main__':
     print("开始")
-    log=Logger().logger
+    log = Logger().logger
     a = MealsPricingHandler()
     a.click_clear_machine_loc()
-    x=a.text_clear_machine_tips_loc()
+    x = a.text_clear_machine_tips_loc()
     print(x)

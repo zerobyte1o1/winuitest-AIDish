@@ -11,6 +11,9 @@ class MealsPricingPage(BasePage):
     def food_management_loc(self):
         return self.locate_element(title='菜品')
 
+    def open_img_loc(self):
+        return self.locate_element(title='打开')
+
     def clear_machine_loc(self):
         return self.locate_element(title='清机')
 
