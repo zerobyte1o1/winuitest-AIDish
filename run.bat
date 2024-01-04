@@ -2,6 +2,8 @@
 
 setlocal enabledelayedexpansion
 
+pip install -r requirements.txt
+
 set "command=pytest testCase/ --alluredir=./result --clean-alluredir"
 
 echo Running command: !command!
