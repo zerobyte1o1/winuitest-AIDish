@@ -16,7 +16,7 @@ set "command=pytest testCase/ --alluredir=./result"
 echo Running command: !command!
 !command!
 
-set "command=allure generate ./result -c -o ./result/report/ && allure serve ./result/ -p 8765"
+set "command=allure generate ./result -o ./result/report/ && allure serve ./result/ -p 8765"
 
 echo Running command: !command!
 !command!
