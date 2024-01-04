@@ -27,7 +27,7 @@ class TestDishRecognition:
 
     @allure.story("菜品新增操作")
     @allure.title("新增菜品_确定")
-    @allure.description("该用例检查用户确认清机操作")
+    @allure.description("识别菜品并新增菜品")
     @allure.testcase(
         "http://192.168.10.26:8081/#/track/case/edit/84680bbd-c131-e114-8dcc-20cbb5364230?projectId=9f25fcce-03ea-40a6-a911-e736e7af30ed",
         name="点击，跳转到对应用例的链接地址")

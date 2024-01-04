@@ -16,7 +16,7 @@ class BasePage:
         self.driver = DriverFactory.driver
         self.app = DriverFactory.app
         self.log = DriverFactory.log
-        self.process_id=DriverFactory.process_id
+        self.process_id = DriverFactory.process_id
 
     def locate_element(
             self,
@@ -67,6 +67,10 @@ class BasePage:
         variables = yaml.safe_load(open(path))
         res = variables[module_name][variables_name]
         return res
+
+    def kill_app(self):
+        self.app.kill(self.process_id)
+        DriverFactory.driver = None
 
 
 if __name__ == '__main__':
