@@ -31,6 +31,7 @@ class TestClearMachine:
             self.mph.click_clear_machine_loc()
         with allure.step('校验是否已清机成功'):
             assert current_time in self.mph.text_clear_machine_tips_loc()
+        self.mph.click_clear_machine_no_lco()
 
     @allure.story("操作清机")
     @allure.title("清机_取消")

@@ -23,7 +23,7 @@ class TestDishRecognition:
             self.mph.click_reidentify_loc()
 
     def teardown(self):
-        self.mph.app.kill(self.mph.process_id)
+        self.mph.kill_app()
 
     @allure.story("菜品新增操作")
     @allure.title("新增菜品_确定")
