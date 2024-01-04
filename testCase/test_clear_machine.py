@@ -12,7 +12,7 @@ class TestClearMachine:
         self.mph = MealsPricingHandler()
 
     def teardown_class(self):
-        self.mph.driver.kill()
+        self.mph.driver.close()
 
     @allure.story("用例-操作并确定清机")
     @allure.title("请求登出接口")
@@ -23,9 +23,9 @@ class TestClearMachine:
     def test_clear_machine_forward(self):
         with allure.step('点击清机按钮'):
             self.mph.click_clear_machine_loc()
-        current_time = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        current_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
         with allure.step('点击确定'):
-            self.mph.clear_machine_yes_loc()
+            self.mph.click_clear_machine_yes_lco()
         with allure.step('再次点击清机按钮'):
             self.mph.click_clear_machine_loc()
         assert current_time in self.mph.text_clear_machine_tips_loc()
