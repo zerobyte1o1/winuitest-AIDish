@@ -40,6 +40,7 @@ class MealsPricingHandler(MealsPricingPage):
         """
         设置打开图片文件名
         """
+        self.open_img_file_name_loc().click_input()
         self.open_img_file_name_loc().type_keys(path)
 
     def click_open_img_ok_loc(self):
