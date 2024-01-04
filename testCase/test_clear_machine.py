@@ -11,7 +11,7 @@ class TestClearMachine:
     def setup_class(self):
         self.mph = MealsPricingHandler()
 
-    def teardown(self):
+    def teardown_class(self):
         self.mph.kill_app()
 
     @allure.story("操作清机")
