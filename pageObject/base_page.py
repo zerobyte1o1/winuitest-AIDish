@@ -16,6 +16,7 @@ class BasePage:
         self.driver = DriverFactory.driver
         self.app = DriverFactory.app
         self.log = DriverFactory.log
+        self.process_id=DriverFactory.process_id
 
     def locate_element(
             self,

@@ -12,7 +12,7 @@ class TestClearMachine:
         self.mph = MealsPricingHandler()
 
     def teardown_class(self):
-        self.mph.driver.close()
+        self.mph.app.kill(self.mph.process_id)
 
     @allure.story("用例-操作并确定清机")
     @allure.title("请求登出接口")
