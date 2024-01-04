@@ -1,3 +1,5 @@
+import os
+
 from pageObject.meals_pricing_page import MealsPricingPage
 from utils.logger import Logger
 
@@ -34,11 +36,11 @@ class MealsPricingHandler(MealsPricingPage):
         """
         self.open_img_loc().click_input()
 
-    def set_text_open_img_file_name_loc(self, path):
+    def type_keys_open_img_file_name_loc(self, path):
         """
         设置打开图片文件名
         """
-        self.open_img_file_name_loc().set_text(path)
+        self.open_img_file_name_loc().type_keys(path)
 
     def click_open_img_ok_loc(self):
         """
