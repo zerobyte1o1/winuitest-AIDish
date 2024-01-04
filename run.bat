@@ -15,6 +15,8 @@ set "command=pytest testCase/ --alluredir=./result"
 echo Running command: !command!
 !command!
 
+ping 127.0.0.1 -n 5 >nul
+
 set "command=allure generate ./result -o ./result/report/ && allure serve ./result/ -p 8765"
 
 echo Running command: !command!
