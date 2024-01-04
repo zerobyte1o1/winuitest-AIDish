@@ -20,3 +20,4 @@ set "command=allure generate ./result -o ./result/report/ && allure serve ./resu
 echo Running command: !command!
 !command!
 
+
