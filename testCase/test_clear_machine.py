@@ -14,11 +14,12 @@ class TestClearMachine:
     def teardown(self):
         self.mph.kill_app()
 
-
     @allure.story("操作清机")
     @allure.title("清机_确认")
     @allure.description("该用例检查用户确认清机操作")
-    @allure.testcase("http://192.168.10.26:8081/#/track/case/edit/2705207b-92ca-03c4-60b2-23230d424de3?projectId=9f25fcce-03ea-40a6-a911-e736e7af30ed", name="点击，跳转到对应用例的链接地址")
+    @allure.testcase(
+        "http://192.168.10.26:8081/#/track/case/edit/2705207b-92ca-03c4-60b2-23230d424de3?projectId=9f25fcce-03ea-40a6-a911-e736e7af30ed",
+        name="点击，跳转到对应用例的链接地址")
     @pytest.mark.p0
     def test_clear_machine_forward(self):
         with allure.step('点击清机按钮'):
@@ -34,7 +35,9 @@ class TestClearMachine:
     @allure.story("操作清机")
     @allure.title("清机_取消")
     @allure.description("该用例检查用户取消清机操作")
-    @allure.testcase("http://192.168.10.26:8081/#/track/case/edit/45f9032c-8167-1c5c-8705-69cbd4eae7d5?projectId=9f25fcce-03ea-40a6-a911-e736e7af30ed", name="点击，跳转到对应用例的链接地址")
+    @allure.testcase(
+        "http://192.168.10.26:8081/#/track/case/edit/45f9032c-8167-1c5c-8705-69cbd4eae7d5?projectId=9f25fcce-03ea-40a6-a911-e736e7af30ed",
+        name="点击，跳转到对应用例的链接地址")
     @pytest.mark.p2
     def test_clear_machine_reverse(self):
         with allure.step('点击清机按钮'):
