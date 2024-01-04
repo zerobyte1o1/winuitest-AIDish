@@ -24,6 +24,11 @@ echo Running command: !command!
 !command!
 
 set "command=allure serve ./result/ -p 8765"
+echo Running command: !command!
+!command!
+
+echo Executing the command: !command!
+!command!
 
 echo Running command: !command!
 !command!
