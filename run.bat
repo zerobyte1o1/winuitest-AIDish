@@ -4,7 +4,6 @@ setlocal enabledelayedexpansion
 
 pip install -r requirements.txt
 
-REM Check if port 8765 is in use and stop the process using that port
 netstat -ano | findstr :8765
 if %errorlevel% equ 0 (
     echo Port 8765 is in use. Stopping the process using that port...
