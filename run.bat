@@ -22,6 +22,6 @@ echo Running command: !command!
 @REM echo Running command: !command!
 @REM !command!
 
-set "command=allure serve ./result/ -p 8765"
+set "command=allure serve ./result/ -p 8765 &"
 echo Running command: !command!
 !command!
