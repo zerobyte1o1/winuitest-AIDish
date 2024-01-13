@@ -11,12 +11,12 @@ import pytest
 class TestDishRecognition:
     def setup_class(self):
         self.mph = MealsPricingHandler()
-        with allure.step('打开需要识别的图片'):
-            self.mph.click_open_img_loc()
-            current_path = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-            img_path = os.path.join(current_path, "data", "test_img.jpg")
-            self.mph.type_keys_open_img_file_name_loc(img_path)
-            self.mph.click_open_img_ok_loc()
+        # with allure.step('打开需要识别的图片'):
+        #     self.mph.click_open_img_loc()
+        #     current_path = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+        #     img_path = os.path.join(current_path, "data", "test_img.jpg")
+        #     self.mph.type_keys_open_img_file_name_loc(img_path)
+        #     self.mph.click_open_img_ok_loc()
 
     def setup(self):
         with allure.step('点击重新识别'):
