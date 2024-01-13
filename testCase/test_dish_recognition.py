@@ -22,7 +22,7 @@ class TestDishRecognition:
         with allure.step('点击重新识别'):
             self.mph.click_reidentify_loc()
 
-    def teardown(self):
+    def teardown_class(self):
         self.mph.kill_app()
 
     @allure.story("菜品新增操作")
