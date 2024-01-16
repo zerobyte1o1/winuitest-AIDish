@@ -1,4 +1,5 @@
 from utils.env import env
+from utils.logger import log
 import requests
 
 
@@ -12,12 +13,10 @@ def send_wechat_message():
     }
     headers = {"Content-Type": "application/json;charset=UTF-8"}
     try:
-        # response = requests.post(env.get_info_url(), json=body, headers=headers)
-        print("执行了")
+        response = requests.post(env.get_info_url(), json=body, headers=headers)
+        log.info(response.text)
     except Exception as e:
-        print("Error occurred while sending wechat message:", str(e))
-
+        log.warning("发送企业微信消息出错"+e)
     # print(response.status_code)
     # print(response.content)
     # print(response.text)
-
