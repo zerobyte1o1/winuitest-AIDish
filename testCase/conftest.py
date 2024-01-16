@@ -3,12 +3,10 @@ import pytest
 
 
 @pytest.fixture(scope='session')
-def send_info():
+def send_info(request):
     """
     发送企业微信消息
     :return:
     """
-    yield
-    send_wechat_message()
 
-send_wechat_message()
+    request.addfinalizer(send_wechat_message)

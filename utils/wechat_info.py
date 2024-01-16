@@ -4,7 +4,12 @@ import requests
 
 
 def send_wechat_message():
-    content = "<font color=\"warning\">自动化测试已完成</font>\n >[测试报告](" + env.get_report_url() + ")"
+    try:
+        with open(env.get_listen_file(), "r") as file:
+            version = file.readline().strip()
+    except FileNotFoundError:
+        log.warning("no listen file")
+    content = "<font color=\"warning\">"+version+"自动化测试已完成</font>\n >[测试报告](" + env.get_report_url() + ")"
     body = {
         "msgtype": "markdown",
         "markdown": {

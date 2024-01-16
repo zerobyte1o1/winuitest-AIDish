@@ -36,6 +36,10 @@ class Environment:
     def get_info_url(self):
         return cf.get('wechat', 'info_url')
 
+    def get_listen_file(self):
+        return cf.get('wechat', 'listen_file')
+
+
 env = Environment()
 if __name__ == "__main__":
     # print(env.url(module="flow"))
