@@ -22,7 +22,7 @@ def send_wechat_message():
             title = "<font  color=\"warning\">未通过</font>"
         content = ""
         for line in lines:
-            content += "" + line.strip() + "\n"
+            content += "" + line.strip() + " \n"
              
     content = "<font color=\"comment\">"+version+"自动化测试</font>"+title+"\n >[详细报告](" + env.get_report_url() + ")\n"+content
     body = {
