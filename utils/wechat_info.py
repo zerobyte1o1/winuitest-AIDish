@@ -1,6 +1,7 @@
 from utils.env import env
 from utils.logger import log
 import requests
+import os
 
 
 def send_wechat_message():
@@ -9,7 +10,21 @@ def send_wechat_message():
             version = file.readline().strip()
     except FileNotFoundError:
         log.warning("no listen file")
-    content = "<font color=\"warning\">"+version+"自动化测试已完成</font>\n >[测试报告](" + env.get_report_url() + ")"
+        
+    parent_directory = os.path.dirname(os.path.dirname(os.getcwd()))
+    result_file = os.path.join(parent_directory, "result.txt")
+    
+    with open(result_file, "r") as fp:
+        lines = fp.readlines()
+        if lines[5].split("=")[1].strip() == "100%":
+            title = "通过"
+        else:
+            title = "未通过"
+        content = ""
+        for line in lines:
+            content += "<p>" + line.strip() + "</p>\n"
+             
+    content = "<font color=\"warning\">"+version+"自动化测试"+title+"</font>\n >[详细报告](" + env.get_report_url() + ")"+content
     body = {
         "msgtype": "markdown",
         "markdown": {
