@@ -10,8 +10,7 @@ def send_info(request):
     发送企业微信消息
     :return:
     """
-    yield
-    request.addfinalizer(send_wechat_message)
+    pass
 
 
 
@@ -37,3 +36,5 @@ def pytest_terminal_summary(terminalreporter, exitstatus, config):
         fp.write("SKIPPED=%s" % skipped+"\n")
         fp.write("SUCCESSFUL=%.2f%%" % successful+"\n")
         fp.write("TOTAL_TIMES=%.2fs" % duration)
+
+    send_wechat_message()
