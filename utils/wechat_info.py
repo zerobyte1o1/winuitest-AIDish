@@ -17,14 +17,14 @@ def send_wechat_message():
     with open(result_file, "r") as fp:
         lines = fp.readlines()
         if lines[5].split("=")[1].strip() == "100%":
-            title = "通过"
+            title = "<font  color=\"info\">通过</font>"
         else:
-            title = "未通过"
+            title = "<font  color=\"warning\">未通过</font>"
         content = ""
         for line in lines:
-            content += "<p>" + line.strip() + "</p>\n"
+            content += "" + line.strip() + "\n"
              
-    content = "<font color=\"warning\">"+version+"自动化测试"+title+"</font>\n >[详细报告](" + env.get_report_url() + ")"+content
+    content = "<font color=\"comment\">"+version+"自动化测试</font>"+title+"\n >[详细报告](" + env.get_report_url() + ")\n"+content
     body = {
         "msgtype": "markdown",
         "markdown": {
