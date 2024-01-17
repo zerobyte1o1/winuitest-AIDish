@@ -10,6 +10,7 @@ def send_info(request):
     发送企业微信消息
     :return:
     """
+    yield
     request.addfinalizer(send_wechat_message)
 
 
