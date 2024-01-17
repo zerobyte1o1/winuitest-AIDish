@@ -37,4 +37,4 @@ def pytest_terminal_summary(terminalreporter, exitstatus, config):
         fp.write("SUCCESSFUL=%.2f%%" % successful+"\n")
         fp.write("TOTAL_TIMES=%.2fs" % duration)
 
-    send_wechat_message()
+    # send_wechat_message()
