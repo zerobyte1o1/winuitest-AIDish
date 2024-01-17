@@ -11,8 +11,8 @@ def send_wechat_message():
     except FileNotFoundError:
         log.warning("no listen file")
         
-    parent_directory = os.path.dirname(os.path.dirname(os.getcwd()))
-    result_file = os.path.join(parent_directory, "result.txt")
+    _directory = os.getcwd()
+    result_file = os.path.join(_directory, "result.txt")
     
     with open(result_file, "r") as fp:
         lines = fp.readlines()
