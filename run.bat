@@ -3,7 +3,8 @@
 setlocal enabledelayedexpansion
 
 pip install -r requirements.txt
-pytest testCase/ --alluredir=c:/result
-allure generate --single-file c:/result -o c:/allure-report
+pytest testCase/ --alluredir=./result/temp
+allure generate  ./result/temp -o ./result/allure-report
+allure-combine ./result/allure-report --dest c:/allure-html
 @REM allure serve ./result/ -p 8765
 
