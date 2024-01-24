@@ -8,7 +8,7 @@ try:
         version = file.readline().strip()
 except FileNotFoundError:
     log.warning("env.get_listen_file() no listen file")
-
-subprocess.call(["allure-combine", "--auto-create-folders", "./result/allure-report", "--dest", "c:/allure-html/"+version])
+path=os.path.join(os.path.abspath(),"result/allure-report")
+subprocess.call(["allure-combine", "--auto-create-folders",path, "--dest", "c:/allure-html/"+version])
 
 
