@@ -1,5 +1,5 @@
 import subprocess
-from utils import env
+from utils.env import env
 from utils.logger import log
 
 try:
