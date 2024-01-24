@@ -10,6 +10,6 @@ except FileNotFoundError:
 
 subprocess.call(["pytest", "testCase/", "--alluredir=./result/temp"])
 subprocess.call(["allure", "generate", "./result/temp", "-o", "./result/allure-report"])
-subprocess.call(["allure-combine", "--auto-create-folders", "./result/allure-report", "--dest", "c:/allure-html/"+version])
+subprocess.call(["allure-combine", "--auto-create-folders", "./result/allure-report", "--dest", "c:/allure-html/1111"])
 
 
